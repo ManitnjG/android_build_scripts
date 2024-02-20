@@ -14,8 +14,6 @@ repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --de
 # Clone local_manifests repository
 git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests ;\
 
-# Removals
-rm -rf prebuilts/clang/host/linux-x86/clang-latest external/chromium-webview && \
 
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
