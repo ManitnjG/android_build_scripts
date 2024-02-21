@@ -2,14 +2,6 @@
 
 set -e
 
-# Initialize repo with specified manifest
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
-
-# Run inside foss.crave.io devspace, in the project folder
-# Remove existing local_manifests
-rm -rf .repo/local_manifests &&
-
-
 # Clone local_manifests repository
 git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests ;\
 
