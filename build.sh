@@ -3,7 +3,7 @@
 set -e
 
 # Clone local_manifests repository
-git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests ;\
+git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests ;\
 
 if [ ! 0 == 0 ]
 then curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1 
