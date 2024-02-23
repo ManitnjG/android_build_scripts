@@ -16,4 +16,4 @@ repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-s
 export BUILD_USERNAME=ManitnjG && 
 export BUILD_HOSTNAME=crave &&
 export TZ=Asia/Jakarta &&
-source build/envsetup.sh && lunch rising_X01BD-userdebug && make clean && mka bacon -j4
+source build/envsetup.sh && lunch lineage_X01BD-userdebug && make clean && mka bacon -j4
