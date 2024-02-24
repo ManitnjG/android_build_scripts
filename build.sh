@@ -1,21 +1,5 @@
 #!/bin/bash
-
-set -e
-git config --global user.email "mani.gamc@gmail.com"
-git config --global user.name "ManitnjG"
-
-# Clone local_manifests repository
-
-repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs
-
-git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests ;\
-
-if [ ! 0 == 0 ]
-then curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1 
-fi &&
-
-# Sync the repositories
-repo sync -c -j4 --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync &&
+cd /home/runner/work/Probuilder/Probuilder
 
 # Set up build environment 
 export BUILD_USERNAME=ManitnjG && 
