@@ -1,16 +1,17 @@
-#!/bin/bash
-cd /home/runner/work/Probuilder/Probuilder
+# Remove local_manifests directory
+rm -rf .repo/local_manifests
+rm -rf build
+# Clone local_manifests repository
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/local_manifests
+# Clone crdroid 14
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs
 
-# Set up build environment 
-export BUILD_USERNAME=ManitnjG && 
-export BUILD_HOSTNAME=crave &&
-export TZ=Asia/Jakarta &&
-source build/envsetup.sh && lunch lineage_X01BD-userdebug && make clean && mka bacon -j10
+# repo sync
+repo sync -c -j14 --force-sync --no-clone-bundle --no-tags --prune
 
-# Pull generated zip files
-crave pull out/target/product/*/*.zip 
-
-# Pull generated img files
-crave pull out/target/product/*/*.img
-
-
+# Set up build environment
+source build/envsetup.sh
+# Lunch configuration
+lunch lineage_X01BD-userdebug
+# Build confriguration
+make bacon -j14
