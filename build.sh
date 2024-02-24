@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -e
+git config --global user.email "mani.gamc@gmail.com"
+git config --global user.name "ManitnjG"
 
 # Clone local_manifests repository
 
