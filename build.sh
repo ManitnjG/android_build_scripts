@@ -28,7 +28,7 @@ source build/envsetup.sh && \
 lunch evolution_X01BD-userdebug ;\
 
 croot ;\
-mka evolution ; \
+m evolution ; \
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
