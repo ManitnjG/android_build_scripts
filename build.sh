@@ -13,12 +13,6 @@ crave run --no-patch -- "rm -rf .repo/local_manifests && \
 # Initialize repo with specified manifest
 repo init -u https://github.com/Evolution-X/manifest -b udc ;\
 
-# Clone local_manifests repository
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b evo .repo/local_manifests ;\
-
-# Removals
-rm -rf system/libhidl prebuilts/clang/host/linux-x86 prebuilt/*/webview.apk platform/external/python/pyfakefs platform/external/python/bumble external/chromium-webview/prebuilt/x86_64 platform/external/opencensus-java && \
-
 # Sync the repositories
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 
@@ -39,8 +33,12 @@ cat out/build_date.txt; \
 # Print SHA256
 sha256sum out/target/product/*/*.zip"
 
-# Clean up
-# rm -rf tissot/*
+cd ~/work/out/target/product/X01BD
+wget https://github.com/Sushrut1101/GoFile-Upload/raw/master/upload.sh
+chmod +x upload.sh
+ls
+./upload.sh e*.zip
+./upload.sh boot.img
 
 
 
