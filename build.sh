@@ -1,43 +1,4 @@
-#!/bin/bash
-
-set -e
-#Credit to Meghthedev for the initial script 
-
-# Initialize repo with specified manifest
-repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
-crave set --projectID 72
-
-# Run inside foss.crave.io devspace, in the project folder
-# Remove existing local_manifests
-crave run --no-patch -- "rm -rf .repo/local_manifests && \
-
-# Clone local_manifests repository
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/local_manifests && \
-
-# Sync the repositories
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
-
-
-# Set up build environment
-source build/envsetup.sh && \
-
-# Lunch configuration
-lunch lineage_X01BD-userdebug && \
-
-# Build the ROM
-rm -rf out/target/product/X01BD/ ; \
-mka bacon && \
-echo "Date and time:" && \
-
-# Print out/build_date.txt
-cat out/build_date.txt; echo \
-
-# Print SHA256
-sha256sum out/target/product/*/*.zip"
-
-# Clean up
-rm -rf oxygen/
-
+ rm -rf .repo/local_manifests && repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs&&https://github.com/ManitnjG/local_manifest-1 -b los -c .repo/local_manifests && repo sync --force-sync -c -j 4 && source build/envsetup.sh && lunch lineage_X01BD-userdebug && mka bacon
 
 
 # Pull generated zip files
