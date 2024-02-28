@@ -3,7 +3,9 @@
 set -e
 
 # Initialize repo with specified manifest
- repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
+repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+
+crave set --projectID 72
 
 # Run inside foss.crave.io devspace, in the project folder
 # Remove existing local_manifests
