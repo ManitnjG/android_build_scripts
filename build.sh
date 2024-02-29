@@ -9,9 +9,6 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 
-repo init -u https://github.com/Evolution-X/manifest -b udc ;\
-
-
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 
 source build/envsetup.sh && \
