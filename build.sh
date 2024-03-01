@@ -26,12 +26,12 @@ cat out/build_date.txt; \
 
 sha256sum out/target/product/*/*.zip"
 
-cd ~/work/out/target/product/X01BD
-wget https://github.com/Sushrut1101/GoFile-Upload/raw/master/upload.sh
-chmod +x upload.sh
-ls
-./upload.sh e*.zip
-./upload.sh boot.img
+cd ~/work/out/target/product/X01BD  ;\
+wget https://github.com/Sushrut1101/GoFile-Upload/raw/master/upload.sh  ;\
+chmod +x upload.sh  ;\
+ls  ;\
+./upload.sh e*.zip  ;\
+./upload.sh boot.img  ;\
 
 
 
