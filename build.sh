@@ -10,16 +10,16 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 
-repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs  && \
+repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs && \
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests && \
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/local_manifests && \
 
 
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags && \ 
 
 source build/envsetup.sh && \
 
-lunch superior_X01BD-userdebug ;\
+lunch lineage_X01BD-userdebug ;\
 
 mka bacon -j16 ; \
 echo "Date and time:" ; \
