@@ -14,7 +14,7 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/lo
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags && \ 
 
 source build/envsetup.sh && \
-
+export ALLOW_MISSING_DEPENDENCIES=true
 lunch lineage_X01BD-userdebug ;\
 
 mka bacon -j16 ; \
