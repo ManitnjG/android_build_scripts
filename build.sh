@@ -10,18 +10,18 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs  && \
+repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs  && \
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests && \
 
 
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags && \ 
 
 source build/envsetup.sh && \
 
-lunch rising_X01BD-userdebug ;\
+lunch superior_X01BD-userdebug ;\
 
-m -j16 ; \
+mka bacon -j16 ; \
 echo "Date and time:" ; \
 
 cat out/build_date.txt; \
