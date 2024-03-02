@@ -10,28 +10,27 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests && \
 
-repo init -u https://github.com/PixelExperience/manifest -b fourteen  && \
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs  && \
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/local_manifests && \
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
 
 
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
+repo sync -c -j16 --force-sync --no-clone-bundle --no-tags && \ 
 
 source build/envsetup.sh && \
 
-lunch aosp_X01BD-userdebug ;\
+lunch rising_X01BD-userdebug ;\
 
-croot ;\
-mka bacon -j16 ; \
+m -j16 ; \
 echo "Date and time:" ; \
 
 cat out/build_date.txt; \
 
-sha256sum out/target/product/*/*.zip"
+sha256sum out/target/product/*/*.zip
 
-
+crave pull out/target/product/*/*.zip "
 # Pull generated zip files
- crave pull out/target/product/*/*.zip 
+ 
 
 # Pull generated img files
 crave pull out/target/product/*/*.img
