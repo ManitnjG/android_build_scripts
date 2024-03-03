@@ -1,24 +1,28 @@
 #!/bin/bash
 
 set -e
+
+
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 
 crave set --projectID 72
 
-crave run --no-patch -- "rm -rf .repo/local_manifests && \
+crave run --no-patch -- "rm -rf .repo .repo/local_manifests android art bionic bootable build cts dalvik developers development device external frameworks hardware kernel libcore libnativehelper lineage-sdk packages pdk platform platform_testing prebuilts sdk system test toolchain tools vendor && \
 
-repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs && \
+export TZ='Asia/Jakarta' && \
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b 13 .repo/local_manifests && \
+repo init -u https://github.com/Evolution-X/manifest -b udc
 
-repo sync -c -j16 --force-sync --no-clone-bundle --no-tags && \ 
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b evo .repo/local_manifests && \
+
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 
 export ALLOW_MISSING_DEPENDENCIES=true
 
 source build/envsetup.sh && \
-lunch lineage_X01BD-userdebug ;\
+lunch evolution_X01BD-userdebug ;\
 
-mka bacon -j16 ; \
+mka bacon ; \
 echo "Date and time:" ; \
 
 cat out/build_date.txt; \
