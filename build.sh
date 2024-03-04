@@ -32,6 +32,9 @@ echo "Date and time:" ; \
 # Print out/build_date.txt
 cat out/build_date.txt; \
 
+crave pull out/target/product/*/*.zip 
+
+
 # Print SHA256
 sha256sum out/target/product/*/*.zip"
 
