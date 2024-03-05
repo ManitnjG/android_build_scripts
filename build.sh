@@ -24,7 +24,7 @@ make clean ;\
 lunch evolution_X01BD-userdebug ;\
 TARGET_USES_MINI_GAPPS := true
 croot ;\
-m evolution ; \
+m evolution -j10 ; \
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
