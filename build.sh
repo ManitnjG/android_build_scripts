@@ -18,11 +18,11 @@ repo sync -c -j10 --force-sync --no-clone-bundle --no-tags ;\
 
 
 source build/envsetup.sh ;\
-export TARGET_USES_MINI_GAPPS=true
+export TARGET_USES_MINI_GAPPS=true ;\
 make clean ;\
 
 lunch evolution_X01BD-userdebug ;\
-TARGET_USES_MINI_GAPPS := true
+
 croot ;\
 m evolution -j10 ; \
 echo "Date and time:" ; \
