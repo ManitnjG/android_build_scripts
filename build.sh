@@ -14,17 +14,16 @@ repo init -u https://github.com/Evolution-X/manifest -b udc ;\
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b evo .repo/local_manifests ;\
 
 
-repo sync -c -j10 --force-sync --no-clone-bundle --no-tags ;\
+repo sync -c -j16 --force-sync --no-clone-bundle --no-tags ;\
 
 
 source build/envsetup.sh ;\
-export TARGET_USES_MINI_GAPPS=true ;\
-make clean ;\
+export TARGET_USES_PICO_GAPPS=true ;\
 
 lunch evolution_X01BD-userdebug ;\
 
 croot ;\
-m evolution -j10 ; \
+m evolution ; \
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
