@@ -8,9 +8,9 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests ;\
 
-repo init -u https://github.com/Evolution-X/manifest -b udc-j ;\
+repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs ;\
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b evo .repo/local_manifests ;\
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests ;\
 
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 
@@ -18,10 +18,10 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 source build/envsetup.sh ;\
 export TARGET_USES_PICO_GAPPS=true ;\
 
-lunch evolution_X01BD-userdebug ;\
+lunch superior_X01BD-userdebug ;\
 
 croot ;\
-m evolution ; \
+mka bacon ; \
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
