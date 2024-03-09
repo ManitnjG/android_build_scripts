@@ -9,6 +9,8 @@ crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\
 
 repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs ;\
 
+rm -rf vendor/superior
+
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests ;\
 
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
