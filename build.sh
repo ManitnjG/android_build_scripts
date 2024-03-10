@@ -17,6 +17,8 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 
 source build/envsetup.sh ;\
 
+export ALLOW_MISSING_DEPENDENCIES=true;\
+
 lunch superior_X01BD-userdebug ;\
 
 croot ;\
