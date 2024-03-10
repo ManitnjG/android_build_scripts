@@ -7,7 +7,7 @@ crave set --projectID 72
 
 crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\
 
-repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen --git-lfs ;\
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs ;\
 
 
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests ;\
@@ -19,7 +19,8 @@ source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true;\
 
-lunch superior_X01BD-userdebug ;\
+lunch rising_X01BD-userdebug ;\
+export RISING_PACKAGE_TYPE := "VANILLA_AOSP"
 
 croot ;\
 mka bacon ; \
