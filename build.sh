@@ -10,7 +10,7 @@ crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs ;\
 
 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b sup .repo/local_manifests ;\
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests ;\
 
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 
@@ -23,7 +23,7 @@ lunch rising_X01BD-userdebug ;\
 export RISING_PACKAGE_TYPE := "VANILLA_AOSP"
 
 croot ;\
-mka bacon ; \
+m -j16 ; \
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
