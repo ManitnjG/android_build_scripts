@@ -11,11 +11,11 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/lo
 
 source build/envsetup.sh ;\
 
-export ALLOW_MISSING_DEPENDENCIES := "true" ;\
+export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch rising_X01BD-userdebug ;\
 
-export RISING_PACKAGE_TYPE := "VANILLA_AOSP"
+export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
 
 opt_patch ;\
 m -j16 ; \
