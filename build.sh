@@ -18,7 +18,7 @@ lunch rising_X01BD-userdebug ;\
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
 
 opt_patch ;\
-m -j16 ; \
+riseup X01BD userdebug ;\
 echo "Date and time:" ; \
 
 # Print out/build_date.txt
