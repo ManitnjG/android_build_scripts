@@ -7,14 +7,17 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests
 
+
+
 source build/envsetup.sh ;\
 
-export ALLOW_MISSING_DEPENDENCIES := true ;\
+export ALLOW_MISSING_DEPENDENCIES := "true" ;\
 
 lunch rising_X01BD-userdebug ;\
+
 export RISING_PACKAGE_TYPE := "VANILLA_AOSP"
 
-croot ;\
+opt_patch ;\
 m -j16 ; \
 echo "Date and time:" ; \
 
