@@ -7,22 +7,16 @@ crave set --projectID 72
 
 crave run --clean --no-patch -- "rm -rf .repo/local_manifests
 
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
-
 source build/envsetup.sh ;\
-
 export ALLOW_MISSING_DEPENDENCIES=true ;\
-
-lunch rising_X01BD-userdebug ;\
-
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
-
 opt_patch ;\
 riseup X01BD userdebug ;\
 echo "Date and time:" ; \
 
-# Print out/build_date.txt
-cat out/build_date.txt; \
 
 crave pull out/target/product/*/*.zip "
 
