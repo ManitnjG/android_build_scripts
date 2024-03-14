@@ -8,7 +8,7 @@ crave set --projectID 72
 crave run --clean --no-patch -- "rm -rf .repo/local_manifests android build device libnativehelper prebuilts vendor Android.bp BUILD external lineage sdk WORKSPACE art cts frameworks lineage-sdk system bionic dalvik hardware packages test bootable developers kernel pdk toolchain bootstrap.bash development libcore platform_testing tools && \
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ri .repo/local_manifests && \
 source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
