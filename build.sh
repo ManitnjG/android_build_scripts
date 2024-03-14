@@ -13,8 +13,8 @@ source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
 opt_patch ;\
-lunch rising_X01BD-userdebug
-m -j10 ;\
+lunch rising_X01BD-userdebug ;\
+m -j16 ;\
 echo "Date and time:" ; \
 
 
