@@ -5,9 +5,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --clean --no-patch -- "rm -rf .repo/local_manifests
-
-rm -rf android build device libnativehelper prebuilts vendor Android.bp BUILD external lineage sdk WORKSPACE art cts frameworks lineage-sdk system bionic dalvik hardware packages test bootable developers kernel pdk toolchain bootstrap.bash development libcore platform_testing tools && \
+crave run --clean --no-patch -- "rm -rf .repo/local_manifests android build device libnativehelper prebuilts vendor Android.bp BUILD external lineage sdk WORKSPACE art cts frameworks lineage-sdk system bionic dalvik hardware packages test bootable developers kernel pdk toolchain bootstrap.bash development libcore platform_testing tools && \
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
