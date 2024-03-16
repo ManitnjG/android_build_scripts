@@ -12,7 +12,6 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
-opt_patch ;\
 lunch lineage_X01BD-userdebug ;\
 m bacon -j16 ;\
 echo "Date and time:" ; \
