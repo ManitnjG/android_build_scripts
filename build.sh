@@ -7,7 +7,7 @@ crave set --projectID 72
 
 crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\ 
 repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs ;\
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests ;\
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/local_manifests ;\
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
