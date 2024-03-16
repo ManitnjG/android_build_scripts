@@ -11,7 +11,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/lo
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
-export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
 lunch lineage_X01BD-userdebug ;\
 m bacon -j16 ;\
 echo "Date and time:" ; \
