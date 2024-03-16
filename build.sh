@@ -5,16 +5,16 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\ rm -rf prebuilts/clang/host/linux-x86/clang-r498229b  ;\
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs ;\
+crave run --clean --no-patch -- "rm -rf .repo/local_manifests ;\ 
+repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs ;\
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests ;\
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags ;\
 source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 export RISING_PACKAGE_TYPE=VANILLA_AOSP ;\
 opt_patch ;\
-lunch rising_X01BD-userdebug ;\
-m -j16 ;\
+lunch lineage_X01BD-userdebug ;\
+m bacon -j16 ;\
 echo "Date and time:" ; \
 
 
