@@ -5,7 +5,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --no-patch -- "rm -rf .repo/local_manifests && \ rm -rf prebuilts/clang/host/linux-x86/clang-r498229b
+crave run --no-patch -- "rm -rf .repo/local_manifests && \ rm -rf prebuilts/clang/host/linux-x86/clang-r498229b  && \
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests && \
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags && \ 
