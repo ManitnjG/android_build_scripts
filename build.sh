@@ -15,6 +15,7 @@ repo sync -c -j16 --force-sync --no-clone-bundle --no-tags ;\
 
 source build/envsetup.sh ;\
 
+export INLINE_KERNEL_BUILDING=false ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch lineage_X01BD-userdebug ;\
