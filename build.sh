@@ -14,7 +14,7 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/lo
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags ;\
  rm -rf vendor/lineage
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
-m clean
+
 source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true ;\
