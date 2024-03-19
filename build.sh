@@ -12,11 +12,10 @@ repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs ;\
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/local_manifests ;\
 
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags ;\
- rm -rf build/soong
-git clone https://github.com/ManitnjG/android_build_soong -b 14.0 build/soong
+ rm -rf vendor/lineage
+git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
 source build/envsetup.sh ;\
 
-export INLINE_KERNEL_BUILDING=false ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch lineage_X01BD-userdebug ;\
