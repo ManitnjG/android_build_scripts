@@ -5,25 +5,15 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --no-patch -- "rm -rf .repo/local_manifests ;\ 
-
-repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs ;\
-
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/local_manifests ;\
-
-repo sync -c -j16 --force-sync --no-clone-bundle --no-tags ;\
- rm -rf vendor/lineage
-git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
-
+crave run --no-patch -- "
 source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch lineage_X01BD-userdebug ;\
 
-m bacon -j16 ;\
+m bacon ;\
 echo "Date and time:" ; \
-
 
 crave pull out/target/product/*/*.zip "
 
