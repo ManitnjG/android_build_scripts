@@ -5,7 +5,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --no-patch -- "
+crave run --no-patch -- " rm -rf device/asus/sdm660-common
 git clone https://github.com/ManitnjG/android_device_asus_sdm660-common --depth 1 -b 14-4.19 device/asus/sdm660-common ;\
 
 
