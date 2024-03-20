@@ -6,6 +6,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 crave set --projectID 72
 
 crave run --no-patch -- " rm -rf .repo/local_manifests
+git clone https://github.com/ManitnjG/local_manifest-1 -b los 
 
 source build/envsetup.sh ;\
 
