@@ -13,13 +13,13 @@ git clone https://github.com/ManitnjG/android_device_asus_X01BD-4.19 -b lineage-
 git clone https://github.com/SonicBSV/android_device_asus_sdm660-common-4.19  -b lineage-21.0-RetrofitDynParts device/asus/sdm660-common
 git clone https://github.com/SonicBSV/proprietary_vendor_asus-4.19 -b lineage-21.0 vendor/asus
 git clone https://github.com/SonicBSV/android_kernel_asus_sdm660-4.19 -b master-RetrofitDynParts kernel/asus/sdm660
-m clean
+
 source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch lineage_X01BD-userdebug ;\
-
+m clean
 m bacon ;\
 echo "Date and time:" ; \
 
