@@ -6,9 +6,8 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 crave set --projectID 72
 
 crave run --no-patch -- "
-git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/local_manifests ;\
+git clone https://github.com/ManitnjG/android_device_asus_sdm660-common --depth 1 -b 14-4.19 device/asus/sdm660-common ;\
 
-/opt/crave/resync.sh
 
 source build/envsetup.sh ;\
 
