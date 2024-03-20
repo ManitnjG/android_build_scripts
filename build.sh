@@ -6,6 +6,10 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 crave set --projectID 72
 
 crave run --no-patch -- "
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/local_manifests ;\
+
+/opt/crave/resync.sh
+
 source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true ;\
