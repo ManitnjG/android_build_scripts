@@ -21,6 +21,7 @@ source build/envsetup.sh ;\
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
 lunch lineage_X01BD-userdebug ;\
+rm -rf out/target/product/X01BD/
 mka bacon ;\
 echo "Date and time:" ; \
 
