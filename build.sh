@@ -11,7 +11,8 @@ repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 
 git clone https://github.com/ManitnjG/local_manifest-1 -b ris .repo/local_manifests && \
 
-/opt/crave/resync.sh && \
+
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all) && \
 
  rm -rf vendor/lineage
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
