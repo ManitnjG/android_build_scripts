@@ -7,9 +7,9 @@ crave set --projectID 72
 
 crave run --no-patch -- " rm -rf .repo/local_manifests && \
 
-repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs  && \
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 
-git clone https://github.com/ManitnjG/local_manifest-1 -b mat .repo/local_manifests && \
+git clone https://github.com/ManitnjG/local_manifest-1 -b ris .repo/local_manifests && \
 
 /opt/crave/resync.sh && \
 
@@ -20,9 +20,9 @@ source build/envsetup.sh ;\
 
 export ALLOW_MISSING_DEPENDENCIES=true ;\
 
-lunch lineage_X01BD-userdebug ;\
+lunch rising_X01BD-userdebug ;\
 rm -rf out/target/product/X01BD/
-m bacon ;\
+m ;\
 echo "Date and time:" ; \
 
 crave pull out/target/product/*/*.zip "
