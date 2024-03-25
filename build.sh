@@ -11,7 +11,13 @@ repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 
 git clone https://github.com/ManitnjG/local_manifest-1 -b ris .repo/local_manifests && \
 
-repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all) && \
+if [ ! 0 == 0 ]
+ then   curl -o .repo/local_manifests https://github.com/Tiktodz/local_manifest
+   echo Git clone failed, downloading through curl instead...
+ fi 
+
+/opt/crave/resync.sh && \
+
 
  rm -rf vendor/lineage
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
