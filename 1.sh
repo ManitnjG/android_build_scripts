@@ -11,4 +11,4 @@ repo init -u https://github.com/NusantaraProject-ROM/android_manifest -b 11 && \
  
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j16 && ls &&
 rm -rf out/target/product/X01BD/
-source build/envsetup.sh && lunch nad_X01BD-userdebug && mka nad "
+source build/envsetup.sh && lunch nad_X01BD-userdebug && mka nad -j16 "
