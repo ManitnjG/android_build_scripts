@@ -8,7 +8,6 @@ crave run --no-patch -- "rm -rf .repo/local_manifests android build device libna
 git clone https://github.com/ManitnjG/local_manifest-1 -b nu .repo/local_manifests &&
 
 repo init -u https://github.com/Havoc-OS-Revived/android_manifest.git -b eleven --git-lfs && \
- 
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j16 &&
+/opt/crave/resync.sh  && 
 export WITH_GAPPS=true
-source build/envsetup.sh && export WITH_GAPPS=true && lunch havoc_X01BD-userdebug && m bacon -j16 "
+source build/envsetup.sh && export WITH_GAPPS=true && lunch havoc_X01BD-userdebug && m bacon  "
