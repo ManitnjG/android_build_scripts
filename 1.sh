@@ -8,7 +8,7 @@ crave run --no-patch -- "rm -rf .repo/local_manifests Android.bp bootable compat
 
 git clone https://github.com/ManitnjG/local_manifest-1 -b nu .repo/local_manifests &&
 
-repo init -u https://github.com/Havoc-OS-Revived/android_manifest.git -b eleven --git-lfs && \
+repo init -u https://github.com/Corvus-AOSP/android_manifest.git -b 11 && \
 /opt/crave/resync.sh  && 
 export WITH_GAPPS=true
-source build/envsetup.sh && export WITH_GAPPS=true && lunch havoc_X01BD-userdebug && m bacon  "
+source build/envsetup.sh && export WITH_GAPPS=true && lunch corvus_X01BD-userdebug && make corvus "
