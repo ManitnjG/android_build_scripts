@@ -10,5 +10,4 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b nu .repo/local_manifes
 
 repo init -u https://github.com/Corvus-AOSP/android_manifest.git -b 11 && \
 /opt/crave/resync.sh  && 
-export WITH_GAPPS=true
-source build/envsetup.sh && export WITH_GAPPS=true && lunch corvus_X01BD-userdebug && make corvus "
+source build/envsetup.sh && lunch corvus_X01BD-userdebug && make corvus "
