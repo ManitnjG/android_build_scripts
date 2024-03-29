@@ -8,6 +8,6 @@ crave run --no-patch -- "rm -rf .repo/local_manifests Android.bp bootable compat
 
 git clone https://github.com/ManitnjG/local_manifest-1 -b nu .repo/local_manifests &&
 
-repo init -u https://github.com/Corvus-AOSP/android_manifest.git -b 11 && \
+repo init --depth=1 -u https://github.com/Corvus-AOSP/android_manifest.git -b 11 && 
 /opt/crave/resync.sh  && 
 source build/envsetup.sh && lunch corvus_X01BD-userdebug && make corvus "
