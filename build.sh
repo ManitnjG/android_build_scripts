@@ -12,7 +12,7 @@ repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 git clone https://github.com/ManitnjG/local_manifest-1 -b ris .repo/local_manifests && \
 
 if [ ! 0 == 0 ]
- then   curl -o .repo/local_manifests https://github.com/Tiktodz/local_manifest
+ then   curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1 -b ris 
    echo Git clone failed, downloading through curl instead...
  fi 
 
