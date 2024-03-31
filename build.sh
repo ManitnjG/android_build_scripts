@@ -7,7 +7,7 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests/  &&
 
-repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen-aosp &&
+repo init -u https://github.com/SuperiorOS/manifest.git -b fourteen &&
 
 git clone https://github.com/ManitnjG/local_manifest-1 -b sup .repo/local_manifests &&
 
