@@ -12,7 +12,7 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b evo .repo/local_manife
  rm -rf vendor/lineage &&
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage &&
 
-
+rm -rf out/host/linux-x86 &&
 source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
 lunch evolution_X01BD-userdebug &&
