@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
-
+mkdir lo
+cd lo
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 
 crave set --projectID 72
