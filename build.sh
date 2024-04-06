@@ -14,9 +14,9 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b ris .repo/local_manife
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage &&
 source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
-lunch riseup_X01BD-userdebug &&
+lunch rising_X01BD-userdebug &&
 
-m bacon  &&
+m -j$(nproc --all)  &&
 echo "Date and time:" &&
 
 crave pull out/target/product/*/*.zip "
