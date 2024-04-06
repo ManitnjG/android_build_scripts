@@ -5,7 +5,7 @@ repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 
 
 crave set --projectID 72
 
-crave run --no-patch -- "rm -rf .repo/local_manifests/  &&
+crave run --no-patch -- "rm -rf .repo/local_manifests/ de  los  repo  rising &&
 repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs &&
 git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests &&
 
