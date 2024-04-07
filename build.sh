@@ -16,7 +16,7 @@ source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
 lunch rising_X01BD-userdebug &&
 
-m -j$(nproc --all)  &&
+m  &&
 echo "Date and time:" &&
 
 crave pull out/target/product/*/*.zip "
