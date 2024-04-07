@@ -18,9 +18,9 @@ source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
 lunch lineage_X01BD-ap1a-userdebug &&
 mka bacon  &&
-echo "Date and time:" &&
+echo "Date and time:" &&  "
 
-#crave pull out/target/product/*/*.zip "
+#crave pull out/target/product/*/*.zip
 
 
 # Upload zips to Telegram
