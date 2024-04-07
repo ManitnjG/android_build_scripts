@@ -12,7 +12,7 @@ git clone https://github.com/ManitnjG/local_manifest-1.git --depth 1 -b los .rep
 curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1.git
 /opt/crave/resync.sh && 
  rm -rf vendor/lineage &&
-git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage &&
+git clone https://github.com/ManitnjG/android_vendor_lineage1 -b lineage-21.0 vendor/lineage &&
 source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
 lunch lineage_X01BD-userdebug &&
