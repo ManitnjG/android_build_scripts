@@ -15,7 +15,7 @@ curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1.git
 git clone https://github.com/ManitnjG/android_vendor_lineage1 -b lineage-21.0 vendor/lineage &&
 source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
-lunch lineage_X01BD-userdebug &&
+lunch lineage_X01BD-ap1a-userdebug &&
 mka bacon  &&
 echo "Date and time:" &&
 
