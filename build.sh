@@ -7,19 +7,19 @@ crave set --projectID 72
 
 crave run --no-patch -- "rm -rf .repo/local_manifests  &&
 repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs &&
-git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests &&
 
+git clone https://github.com/ManitnjG/local_manifest-1.git --depth 1 -b los .repo/local_manifests ||
+curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1.git
 /opt/crave/resync.sh && 
  rm -rf vendor/lineage &&
 git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage &&
 source build/envsetup.sh &&
 export ALLOW_MISSING_DEPENDENCIES=true &&
 lunch lineage_X01BD-userdebug &&
-
 mka bacon  &&
 echo "Date and time:" &&
 
-crave pull out/target/product/*/*.zip "
+#crave pull out/target/product/*/*.zip "
 
 
 # Upload zips to Telegram
