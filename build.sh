@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-crave set --projectID 72
 repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+crave set --projectID 72
 crave run --no-patch -- "rm -rf .repo/local_manifests  &&
 repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs &&
 
