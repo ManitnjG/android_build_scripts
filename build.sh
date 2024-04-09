@@ -1,6 +1,6 @@
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 crave set --projectID 72
-crave run --no-patch -- "rm -rf .repo/local_manifests
+crave run --no-patch -- "rm -rf .repo/local_manifests prebuilts/clang/host/linux-x86
 git clone https://github.com/ManitnjG/local_manifest-1.git --depth 1 -b los .repo/local_manifests && 
 /opt/crave/resync.sh && 
  rm -rf vendor/lineage &&
