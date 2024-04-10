@@ -1,7 +1,6 @@
 
 crave run --no-patch -- "rm -rf out
-source build/envsetup.sh && export ALLOW_MISSING_DEPENDENCIES=true && lunch evolution_X01BD-ap1a-userdebug && m evolution
-echo "Date and time:" &&  "
+source build/envsetup.sh && export ALLOW_MISSING_DEPENDENCIES=true && lunch evolution_X01BD-ap1a-userdebug && m evolution "
 
 #crave pull out/target/product/*/*.zip
 
