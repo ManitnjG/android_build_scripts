@@ -10,11 +10,11 @@ if [ ! 0 == 0 ]
  fi 
   # Sync the repositories
   /opt/crave/resync.sh  && \
-  
+  croot
   # Set up build environment
   export BUILD_USERNAME=ManitnjG ; \
   export BUILD_HOSTNAME=crave ; \
   source build/envsetup.sh && \
   lunch evolution_X01BD-userdebug && \
   make installclean && \
-  mka bacon"
+  mka evolution"
