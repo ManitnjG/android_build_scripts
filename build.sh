@@ -4,9 +4,9 @@ crave set --projectID 72
 crave run --no-patch -- "rm -rf .repo/local_manifests out prebuilts/clang/host/linux-x86 && 
 # Initialize local repository
 repo init -u https://github.com/Evolution-X/manifest -b u
- git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b evo .repo/local_manifests && 
+ git clone https://github.com/ManitnjG/local_manifest --depth 1 -b evo .repo/local_manifests && 
 if [ ! 0 == 0 ]
- then   curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest-1
+ then   curl -o .repo/local_manifests https://github.com/ManitnjG/local_manifest
  fi 
   # Sync the repositories
   /opt/crave/resync.sh  && \
