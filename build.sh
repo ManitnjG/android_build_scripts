@@ -6,6 +6,6 @@ git clone https://github.com/ManitnjG/local_manifest-1.git --depth 1 -b evo .rep
 rm -rf vendor/evolution &&
 git clone https://github.com/ManitnjG/vendor_evolution -b u vendor/evolution &&
 
-source build/envsetup.sh && croot && export ALLOW_MISSING_DEPENDENCIES=true && lunch evolution_X01BD-userdebug && m evolution "
+source build/envsetup.sh && croot && export ALLOW_MISSING_DEPENDENCIES=true && lunch evolution_X01BD-ap1a-userdebug && m evolution "
 
 #crave pull
