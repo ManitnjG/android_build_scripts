@@ -1,4 +1,5 @@
-repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --repo-url=https://github.com/android/tools_repo.git --repo-branch=stable --git-lfs
+set -e
+repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
 crave set --projectID 72
 crave run --no-patch -- "rm -rf .repo/local_manifests out prebuilts/clang/host/linux-x86 && 
 # Initialize local repository
