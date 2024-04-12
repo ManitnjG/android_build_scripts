@@ -11,4 +11,4 @@ crave run --no-patch -- "
   source build/envsetup.sh && \
   lunch evolution_X01BD-userdebug && \
   make installclean && \
-  mka evolution"
+  m evolution"
