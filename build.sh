@@ -1,10 +1,9 @@
 set -e
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 crave set --projectID 72
-crave run --no-patch -- "rm -rf device/asus/X01BD device/asus/sdm660-common vendor/asus kernel/asus/sdm660 
- 
-  
-  # Sync the repositories
+crave run --no-patch -- "rm -rf device/asus/X01BD device/asus/sdm660-common vendor/asus kernel/asus/sdm660 ; \
+git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests &&
+/opt/crave/resync.sh  &&
   rm -rf vendor/evolution
   git clone https://github.com/ManitnjG/vendor_evolution -b u vendor/evolution && \
   # Set up build environment
