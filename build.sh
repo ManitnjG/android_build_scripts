@@ -15,6 +15,6 @@ if [ ! 0 == 0 ]
   export BUILD_USERNAME=ManitnjG ; \
   export BUILD_HOSTNAME=crave ; \
   source build/envsetup.sh && \
-  lunch evolution_X01BD-apla-userdebug && \
+  lunch evolution_X01BD-userdebug && \
   make installclean && \
   mka evolution"
