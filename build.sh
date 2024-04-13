@@ -5,6 +5,6 @@ crave run --no-patch -- "export BUILD_USERNAME=ManitnjG ; \
   export BUILD_HOSTNAME=crave ; \
   source build/envsetup.sh && \
   croot
-  lunch evolution_X01BD-apla-userdebug && \
+  lunch evolution_X01BD-userdebug && \
   make installclean && \
   m evolution"
