@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 crave set --projectID 72
-crave run --no-patch -- "rm -rf device/asus/sdm660-common out
+crave run --no-patch -- "rm -rf device/asus/sdm660-common device/asus/sdm660-common-4.19 out
  rm -rf vendor/evolution 
  git clone https://github.com/Evolution-X/vendor_evolution -b u vendor/evolution
   export BUILD_USERNAME=ManitnjG ; \
