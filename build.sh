@@ -10,6 +10,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manife
   export BUILD_HOSTNAME=crave ; \
   source build/envsetup.sh && \
   croot
-  lunch evolution_X01BD-userdebug && \
+  lunch evolution_X01BD-apla-userdebug && \
   make installclean && \
   m evolution"
