@@ -4,7 +4,7 @@ set -e
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 
 crave set --projectID 72
-crave run --no-patch -- "rm -rf .repo/local_manifests/  && # Clone local_manifests repository
+crave run --no-patch -- "rm -rf .repo/local_manifests/ out  && # Clone local_manifests repository
 repo init -u https://github.com/Evolution-X/manifest -b u
  git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests && 
 if [ ! 0 == 0 ]
@@ -16,5 +16,5 @@ if [ ! 0 == 0 ]
   export BUILD_USERNAME=ManitnjG ; \
   export BUILD_HOSTNAME=crave ; \
 chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh && 
-source build/envsetup.sh && export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
-export ALLOW_MISSING_DEPENDENCIES=true  &&  lunch evolution_X01BD-userdebug && m evolution"
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
+export ALLOW_MISSING_DEPENDENCIES=true  && source build/envsetup.sh && lunch evolution_X01BD-userdebug && m evolution"
