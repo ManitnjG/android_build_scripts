@@ -1,12 +1,11 @@
 #!/bin/bash
 set -e
 crave set --projectID 72
-crave run --no-patch -- "
- rm -rf vendor/evolution
+crave run --no-patch -- "rm -rf device/asus/sdm660-common out
+ rm -rf vendor/evolution 
  git clone https://github.com/Evolution-X/vendor_evolution -b u vendor/evolution
   export BUILD_USERNAME=ManitnjG ; \
   export BUILD_HOSTNAME=crave ; \
-  rm -rf device/asus/sdm660-common
   git clone https://github.com/SonicBSV/android_device_asus_sdm660-common-4.19 -b lineage-21.0-RetrofitDynParts device/asus/sdm660-common
 chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh && 
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
