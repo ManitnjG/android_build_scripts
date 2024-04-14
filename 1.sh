@@ -9,4 +9,5 @@ crave run --no-patch -- "rm -rf .repo/local_manifests Android.bp bootable compat
 git clone https://github.com/ManitnjG/local_manifest-1 -b los .repo/local_manifests &&
 repo init -u https://github.com/Evolution-X/manifest -b u && 
 /opt/crave/resync.sh  && 
-source build/envsetup.sh && export WITH_GAPPS=false &&  lunch evolution_X01BD-userdebug && m evolution"
+source build/envsetup.sh && export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
+export ALLOW_MISSING_DEPENDENCIES=true  &&  lunch evolution_X01BD-userdebug && m evolution"
