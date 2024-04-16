@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -e
-
+crave set --projectID 72
 # Initialize repo with specified manifest
  repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs
 
