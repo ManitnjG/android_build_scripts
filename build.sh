@@ -8,6 +8,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/lo
 chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh && 
  rm -rf vendor/evolution 
  git clone https://github.com/ManitnjG/vendor_evolution -b u vendor/evolution && 
-
+export TARGET_USES_MINI_GAPPS=true
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
 export ALLOW_MISSING_DEPENDENCIES=true  && source build/envsetup.sh && lunch evolution_X01BD-userdebug && m evolution"
