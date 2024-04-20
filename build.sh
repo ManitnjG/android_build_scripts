@@ -11,4 +11,4 @@ rm -rf vendor/lineage
   croot
   lunch rising_X01BD-userdebug && \
   make installclean && \
-  mka bacon"
+  m"
