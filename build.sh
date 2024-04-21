@@ -8,6 +8,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/lo
 chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh &&
   source build/envsetup.sh && \
   croot
-  lunch rising_X01BD-userdebug && \
+  lunch rising_X01BD-ap1a-userdebug && \
   make installclean && \
   m"
