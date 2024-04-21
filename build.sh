@@ -9,6 +9,6 @@ rm -rf vendor/lineage
   https://github.com/ManitnjG/vendor_lineage -b u vendor/lineage && \
   source build/envsetup.sh && \
   croot
-  lunch rising_X01BD-userdebug && \
+  lunch rising_X01BD-ap1a-userdebug && \
   make installclean && \
   m"
