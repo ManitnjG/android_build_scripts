@@ -10,6 +10,6 @@ chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh &&
   git clone https://github.com/ManitnjG/android_vendor_lineag -b fourteen vendor/lineage ;\
   source build/envsetup.sh && \
   croot
-  lunch rising_X01BD-userdebug && \
+  lunch lineage_X01BD-userdebug && \
   make installclean && \
   m"
