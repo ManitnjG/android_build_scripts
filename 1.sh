@@ -1,11 +1,4 @@
-#!/bin/bash
-set -e
-crave set --projectID 72
-crave run --no-patch -- "rm -rf out
- rm -rf vendor/evolution 
- git clone https://github.com/Evolution-X/vendor_evolution -b u vendor/evolution
-  export BUILD_USERNAME=ManitnjG ; \
-  export BUILD_HOSTNAME=crave ; \
-chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh && 
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true  &&
-export ALLOW_MISSING_DEPENDENCIES=true  && source build/envsetup.sh && lunch evolution_X01BD-userdebug && m evolution"
+ rm -rf .repo/local_manifests prebuilts/clang/host/linux-x86 && \
+git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/local_manifests ;\ 
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
+repo sync
