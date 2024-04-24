@@ -7,7 +7,7 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b ris .repo/lo
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
 chmod +x /opt/crave/resync.sh && /opt/crave/resync.sh &&
 rm -rf vendor/lineage
-  https://github.com/ManitnjG/vendor_lineage -b u vendor/lineage && \
+git clone https://github.com/ManitnjG/android_vendor_lineag -b fourteen vendor/lineage && \
   source build/envsetup.sh && \
   croot
   lunch riseup X01BD userdebug && \
