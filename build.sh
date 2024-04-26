@@ -1,5 +1,5 @@
 set -e
-
+crave set --projectID 79
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen-qpr 
 crave run  --no-patch " rm -rf .repo/local_manifests  out && 
 repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs
