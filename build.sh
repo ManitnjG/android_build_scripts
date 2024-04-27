@@ -7,6 +7,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b los .repo/lo
 /opt/crave/resync.sh &&
 rm -rf vendor/lineage
 git clone https://github.com/ManitnjG/vendor_sakura -b 14 vendor/sakura
-source build/envsetup.sh &&
+. build/envsetup.sh &&
 lunch lineage_X01BD-ap1a-userdebug &&
 mka bacon"
