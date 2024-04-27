@@ -1,5 +1,5 @@
-#set -e
-#crave set --projectID 79
+set -e
+crave set --projectID 79
 repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen-qpr 
 rm -rf .repo/local_manifests  out && 
 repo init --depth=1 -u https://github.com/ProjectSakura/android.git -b 14 --git-lfs
