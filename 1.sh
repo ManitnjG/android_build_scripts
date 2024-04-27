@@ -1,5 +1,3 @@
-wget https://github.com/Sushrut1101/GoFile-Upload/raw/master/upload.sh
-chmod +x upload.sh
-ls
-./upload.sh *.zip
-./upload.sh boot.img
+source build/envsetup.sh &&
+lunch lineage_X01BD-ap1a-userdebug &&
+mka bacon 
