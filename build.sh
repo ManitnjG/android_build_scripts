@@ -1,2 +1,3 @@
 . build/envsetup.sh &&
-brunch X01BD
+lunch lineage_X01BD-ap1a-userdebug
+brunch X01BD &&
