@@ -5,8 +5,7 @@ crave run --no-patch -- "rm -rf .repo/local_manifests  out &&
 repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs
 git clone https://github.com/ManitnjG/local_manifest-1 --depth 1 -b mat .repo/local_manifests && 
 /opt/crave/resync.sh &&
-rm -rf vendor/evolution
-git clone https://github.com/ManitnjG/vendor_evolution -b u vendor/evolution
+rm -rf vendor/lineage
+git clone https://github.com/ManitnjG/android_vendor_lineage -b 14.0 vendor/lineage
 . build/envsetup.sh &&
-lunch evolution_X01BD-userdebug &&
-m evolution"
+brunch X01BD"
