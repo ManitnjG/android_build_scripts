@@ -1,3 +1,9 @@
+crave set --projectID 79
+repo init -u https://github.com/CipherOS/android_manifest.git -b fourteen-qpr 
+crave run --no-patch -- "rm -rf .repo/local_manifests  out && 
+repo init -u https://github.com/VoltageOS/manifest.git -b 14 --git-lfs
+/opt/crave/resync.sh &&
+rm -rf vendor/voltage  &&
+git clone https://github.com/ManitnjG/vendor_voltage -b 14 vendor/voltage
 . build/envsetup.sh &&
-lunch lineage_X01BD-ap1a-userdebug
 brunch X01BD &&
