@@ -1,5 +1,5 @@
 set -e
-
+crave set --projectID 72
 repo init --depth 1 -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 
 crave run --no-patch -- "rm -rf .repo/local_manifests  out && 
