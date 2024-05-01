@@ -1,2 +1,3 @@
-crave run --no-patch -- ". build/envsetup.sh 
+crave run --no-patch -- "rm -rf out .repo 
+. build/envsetup.sh 
 brunch X01BD "
