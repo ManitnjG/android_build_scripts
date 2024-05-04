@@ -1,5 +1,4 @@
-
-rm -rf .repo/local_manifests &&
+crave run --no-patch -- rm -rf .repo/local_manifests &&
 repo init -u https://github.com/VoltageOS/manifest.git -b 14 --git-lfs
 git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests 
 if [ ! 0 == 0 ]
