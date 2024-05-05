@@ -1,3 +1,4 @@
-crave run --no-patch -- ". build/envsetup.sh
+crave run --no-patch -- " /opt/crave/resync.sh &&
+. build/envsetup.sh
   lunch lineage_violet-ap1a-userdebug
   rise b "
