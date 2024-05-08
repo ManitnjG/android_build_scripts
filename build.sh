@@ -4,7 +4,6 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b evo .repo/local_manife
 /opt/crave/resync.sh &&
 rm -rf vendor/evolution
 git clone https://github.com/ManitnjG/vendor_evolution -b udc vendor/evolution
-rm -rf packages/apps/Trebuchet packages/overlays/Lineage/icons &&
 source build/envsetup.sh
 lunch lineage_X01BD-userdebug
 lunch lineage_X01BD-ap1a-userdebug
