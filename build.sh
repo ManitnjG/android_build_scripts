@@ -6,5 +6,5 @@ rm -rf vendor/lineage && \
 git clone https://github.com/ManitnjG/android_vendor_lineag -b fourteen vendor/lineage && \
 export PRODUCT_NO_CAMERA=true && export TARGET_CORE_GMS=true && \
 source build/envsetup.sh && \
-(lunch lineage_X01BD-userdebug || lunch lineage_X01BD-ap1a-userdebug) && \
+lunch lineage_X01BD-ap1a-userdebug && \
 rise b "
