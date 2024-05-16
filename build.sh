@@ -1,11 +1,12 @@
 crave run --no-patch -- "rm -rf .repo/local_manifests
-epo init -u https://github.com/VoltageOS/manifest.git -b 14 --git-lfs && \
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs && \
 git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests && \
 /opt/crave/resync.sh && \
-rm -rf vendor/voltage
-git clone https://github.com/ManitnjG/vendor_voltage.git -b 14 vendor/voltage
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
-export ALLOW_MISSING_DEPENDENCIES=true 
+rm -rf vendor/rising && \
+git clone https://github.com/ManitnjG/android_vendor_lineag -b fourteen vendor/rising && \
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true && \
+export ALLOW_MISSING_DEPENDENCIES=true && \
+export TARGET_CORE_GMS=true && \
 source build/envsetup.sh && \
-source build/envsetup.sh && \
-brunch X01BD "
+lunch lineage_X01BD-ap1a-userdebug
+rise b"
