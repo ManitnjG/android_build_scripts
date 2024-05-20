@@ -7,5 +7,5 @@ git clone https://github.com/ManitnjG/vendor_lineage -b alpha-14 vendor/lineage
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true && \
 export ALLOW_MISSING_DEPENDENCIES=true && \
 source build/envsetup.sh && \
-lunch infinity_X01BD-userdebug
+lunch lineage_X01BD-ap1a-userdebug
 mka bacon"
