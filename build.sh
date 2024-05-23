@@ -1,4 +1,4 @@
-crave run --no-patch -- "rm -rf .repo/local_manifests
+crave run --no-patch -- "rm -rf .repo/local_manifests out
 repo init -u https://github.com/alphadroid-project/manifest -b alpha-14 --git-lfs
 git clone https://github.com/ManitnjG/local_manifest-1 -b 13 .repo/local_manifests
 /opt/crave/resync.sh && \
