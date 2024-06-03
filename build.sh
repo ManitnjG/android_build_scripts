@@ -6,4 +6,4 @@ export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true && \
 export ALLOW_MISSING_DEPENDENCIES=true && \
 source build/envsetup.sh && \
 lunch lineage_udon-ap1a-userdebug
-rise up"
+rise b"
