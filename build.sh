@@ -5,5 +5,5 @@ git clone https://github.com/ManitnjG/local_manifest-1 -b op .repo/local_manifes
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true && \
 export ALLOW_MISSING_DEPENDENCIES=true && \
 source build/envsetup.sh && \
-lunch lineage_upon-ap1a-userdebug
+lunch lineage_udon-ap1a-userdebug
 rise up"
