@@ -9,6 +9,6 @@ export BUILD_HOSTNAME=crave ; \
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true && \
 export ALLOW_MISSING_DEPENDENCIES=true && \
 source build/envsetup.sh && \
-lunch evolution_udon-userdebug
+lunch lineage_udon-ap1a-userdebug
  make installclean
-m evolution"
+rise b"
