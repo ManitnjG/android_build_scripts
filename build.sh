@@ -1,6 +1,5 @@
 crave run --no-patch -- "rm -rf .repo/local_manifests out
-# Initialize local repository
-repo init -u https://github.com/LineageOS/android.git -b lineage-21.0
+
 git clone https://github.com/ManitnjG/local_manifest-1 -b op .repo/local_manifests
 /opt/crave/resync.sh && \
 git clone https://github.com/opudon/hardware_dolby -b 14 hardware/dolby
